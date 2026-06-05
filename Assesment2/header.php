@@ -67,6 +67,7 @@
                 <li class="nav-item"><a class="nav-link" href="Main.php?Pages=employeeproject">Employee Project</a></li>
                 <li class="nav-item"><a class="nav-link" href="Main.php?Pages=register">Register</a></li>
                 <li class="nav-item"><a class="nav-link" href="Main.php?Pages=login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="Main.php?Pages=upload">Upload</a></li>
             </ul>
         </div>
         <a href="#" class="btn btn-info-tiket px-4">Info Tiket</a>

@@ -57,6 +57,12 @@ include "inc.koneksi.php";
                     case 'dashboardadmin' :
                         include "dashboardadmin.php";
                         break;
+                    case 'upload' :
+                        include "Pages/upload.php";
+                        break;
+                    case 'uploadpost' :
+                        include "Pages/uploadpost.php";
+                        break;
                     default:
                         echo "
                         <div class='alert alert-danger text-center'>
@@ -64,6 +70,7 @@ include "inc.koneksi.php";
                             <p>Maaf, halaman tidak tersedia.</p>
                         </div>";
                         break;
+                    
                 }
             } else {
                 include "Pages/Home.php";
