@@ -1,5 +1,6 @@
 <?php
 require_once('./class/class.User.php');
+require_once('./class/class.Mail.php');
 
 if (isset($_POST['btnSubmit'])) {
     $inputemail = $_POST["email"];
@@ -18,6 +19,20 @@ if (isset($_POST['btnSubmit'])) {
         $objUser->AddUser();
 
         if ($objUser->hasil) {
+            $message = "
+                <h2>Registrasi Berhasil</h2>
+                <p> Selamat <b>{$objUser->name}</b>, anda telah terdaftar pada sistem company UAG.</p>
+                <p>Berikut informasi akun Anda:</p>
+                <ul>
+                    <li>Username: {$objUser->email}</li>
+                    <li>Password: {$password}</li>
+                </ul>
+
+                <p> Silakan login untuk mengakses sistem.</p>
+                ";
+
+                Mail::SendMail($objUser->email, $objUser->name, 'Registrasi berhasil', $message);
+
             echo "<script>alert('Registrasi berhasil');</script>";
             echo "<script>window.location='main.php?Pages=login';</script>";
         }

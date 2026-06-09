@@ -63,6 +63,9 @@ include "inc.koneksi.php";
                     case 'uploadpost' :
                         include "Pages/uploadpost.php";
                         break;
+                    case 'kirim' :
+                        include "Pages/kirim.php";
+                        break;
                     default:
                         echo "
                         <div class='alert alert-danger text-center'>
